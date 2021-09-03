@@ -7,11 +7,11 @@
 >IoC简介
 
 本质就是一个***容器***，负责创建并管理对象的整个生命周期（创建至销毁）,也就是由容器来完成new一个实例的过程，控制权重程序员转向IoC容器，实现控制反转
-
 ```java
 String arg = "IoC很强大"
 TestIoc testIoc = new TestIoc(arg);
 ```
+    IoC不是技术，是一种给设计思想=>松耦合+功能复用
 
 ## IoC容器
 
@@ -86,7 +86,7 @@ synchronized (this.startupShutdownMonitor) {
         registerBeanPostProcessors(beanFactory);
         beanPostProcess.end();
 
-        // MessageSource和时间广播器
+        // MessageSource和事件广播器
         initMessageSource();
         initApplicationEventMulticaster();
 
